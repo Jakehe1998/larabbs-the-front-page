@@ -40,5 +40,10 @@ Route::post('email/resend', 'Auth\VerificationController@resend')->name('verific
 // 用户认证路由结束
 
 
+Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]); // 等同于：
+	// Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+	// Route::get('/users/{user}/get', 'UsersController@show')->name('users.edit');
+	// Route::patch('/users/{user}', 'UsersController@show')->name('users.update');
+
 
 
