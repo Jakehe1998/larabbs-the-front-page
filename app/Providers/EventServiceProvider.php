@@ -19,10 +19,14 @@ class EventServiceProvider extends ServiceProvider
             SendEmailVerificationNotification::class,
         ],
 
-        // 事件
         \Illuminate\Auth\Events\Verified::class => [
             \App\Listeners\EmailVerified::class, // 监听器
         ],
+
+       /* // 重置密码事件
+        passwordReset::class => [
+            \App\Listeners\ResetPassword::class,
+        ],*/
     ];
 
     /**
