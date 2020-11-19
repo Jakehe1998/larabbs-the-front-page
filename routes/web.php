@@ -35,7 +35,7 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('passw
 // Email 认证相关路由
 Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
-Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 // 用户认证路由结束
 
