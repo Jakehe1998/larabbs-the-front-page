@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+    	// 注意顺序 先生成用户数据，再生成话题数据
+        $this->call(UsersTableSeeder::class);
+        $this->call(TopicsTableSeeder::class);
     }
 }
