@@ -34,7 +34,7 @@
 	<!-- Scripts -->
 	<script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
 
-	@yield('script')
+	@yield('scripts')
 
 </body>
 </html>
