@@ -11,8 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-    	// 注意顺序 先生成用户数据，再生成话题数据
+    	// 注意顺序 先生成用户数据，再生成话题数据，最后生成回复数据
         $this->call(UsersTableSeeder::class);
         $this->call(TopicsTableSeeder::class);
+		$this->call(RepliesTableSeeder::class);
     }
 }
