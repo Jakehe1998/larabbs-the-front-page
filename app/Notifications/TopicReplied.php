@@ -52,4 +52,13 @@ class TopicReplied extends Notification
             'topic_title' => $topic->title,
         ];
     }
+
+   /* public function toMail($notifiable)
+    {
+        $url = $this->reply->topic->link(['#reply' . $this->reply->id]);
+
+        return (new MailMessage)
+                    ->line('你的话题有新回复！')
+                    ->action('查看回复', $url);
+    }*/
 }
